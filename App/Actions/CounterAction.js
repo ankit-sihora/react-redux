@@ -2,18 +2,14 @@ import {connect} from 'react-redux';
 import * as Actions from './ActionTypes';
 import CounterComponent  from '../Components/CounterComponent';
 
+const mapStateToProps = (state) => ({
+    count: state.counterReducer.count
+});
 
-function mapStateToProps (state) {
-    return {
-    count: state.counterReducer.count,
-    }
-};
-function mapDispatchToProps(dispatch) {
-    return {
-    increment: () => dispatch(counterIncrement),
-    decrement: () => dispatch(counterDecrement),
-    }
-};
+const mapDispatchToProps = (dispatch) => ({
+    increment: () => dispatch({type: Actions.COUNTER_INCREMENT}),
+    decrement: () => dispatch({type: Actions.COUNTER_DECREMENT}),
+});
 export const counterIncrement = () => ({
     type: Actions.COUNTER_INCREMENT,
 })
