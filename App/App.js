@@ -12,6 +12,7 @@ import {StyleSheet} from 'react-native';
 
 import store from './Reducers/index';
 import CounterAction from './Actions/CounterAction';
+import PageAction from './Actions/PageAction'
 
 //import {Platform, StyleSheet, Text, View} from 'react-native';
 
@@ -31,6 +32,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <CounterAction />
+        <PageAction />
       </Provider>
       // <View style={styles.container}>
       //   <Text style={styles.welcome}>Welcome to React Native!</Text>

@@ -3,22 +3,18 @@ import{
     StyleSheet,
     Text,
     View,
-    Button,
-    Alert
+    Button
 }from 'react-native';
 
-export default class CounterComponent extends Component {
+export default class Component2 extends Component {
 
     constructor(props){
         super(props)
-        this.state={
-            page: this.props.children
-        }
     }
     render(){
         return(
             <View style={styles.container}>
-                <View style={{flex:1}}><Text>This is page One</Text></View>
+                <View><Text>This is page Two</Text></View>
                 <Button 
                     onPress={this.props.increment}
                     title="Increase Count"
@@ -32,12 +28,6 @@ export default class CounterComponent extends Component {
                 color='#841584'
                 accessibilityLabel="Decrease Conut"
             />
-            <View style={{flex:1,marginTop:80}}>
-            <Button
-                style={{marginTop:60}} 
-                onPress={()=>Alert.alert('hello')}
-                title='goto next page'
-            /></View>
             </View>
         );
     }

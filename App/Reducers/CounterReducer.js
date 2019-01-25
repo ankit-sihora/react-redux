@@ -1,6 +1,6 @@
 import * as Actions from '../Actions/ActionTypes';
 
-const CounterReducer = (state ={count:0},action) => {
+const CounterReducer = (state ={count:0,page:'ankit'},action) => {
     switch (action.type){
         case Actions.COUNTER_INCREMENT:
             return {
@@ -10,6 +10,10 @@ const CounterReducer = (state ={count:0},action) => {
             return {
                 count: state.count - 1
             };
+        case Actions.PAGE:
+            return {
+                page: 'sihora'
+            }
         default:
             return state;
     }

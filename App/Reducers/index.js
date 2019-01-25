@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 const AppReducers = combineReducers({
     counterReducer,
+    
 });
 
 const rootReducer = (state,action) => {
