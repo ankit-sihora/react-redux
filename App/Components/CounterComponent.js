@@ -11,9 +11,6 @@ export default class CounterComponent extends Component {
 
     constructor(props){
         super(props)
-        this.state={
-            page: this.props.children
-        }
     }
     render(){
         return(
@@ -35,7 +32,7 @@ export default class CounterComponent extends Component {
             <View style={{flex:1,marginTop:80}}>
             <Button
                 style={{marginTop:60}} 
-                onPress={()=>Alert.alert('hello')}
+                onPress={()=>this.props.navigation.navigate('Component2')}
                 title='goto next page'
             /></View>
             </View>

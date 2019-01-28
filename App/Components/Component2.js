@@ -14,7 +14,7 @@ export default class Component2 extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <View><Text>This is page Two</Text></View>
+                <View style={{flex:1}}><Text>This is page Two</Text></View>
                 <Button 
                     onPress={this.props.increment}
                     title="Increase Count"
@@ -28,6 +28,12 @@ export default class Component2 extends Component {
                 color='#841584'
                 accessibilityLabel="Decrease Conut"
             />
+            <View style={{flex:1,marginTop:80}}>
+            <Button
+                style={{marginTop:60}} 
+                onPress={()=>this.props.navigation.navigate('CounterComponent')}
+                title='goto previous page'
+            /></View>
             </View>
         );
     }

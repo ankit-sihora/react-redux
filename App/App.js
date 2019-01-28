@@ -9,10 +9,11 @@
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import {StyleSheet} from 'react-native'; 
-
+import Navigator from './navigator'
 import store from './Reducers/index';
 import CounterAction from './Actions/CounterAction';
 import PageAction from './Actions/PageAction'
+import CounterComponent from './Components/CounterComponent';
 
 //import {Platform, StyleSheet, Text, View} from 'react-native';
 
@@ -31,8 +32,9 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <CounterAction />
-        <PageAction />
+        <Navigator />
+        {/* <CounterAction />
+        <PageAction /> */}
       </Provider>
       // <View style={styles.container}>
       //   <Text style={styles.welcome}>Welcome to React Native!</Text>
