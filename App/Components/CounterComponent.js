@@ -4,7 +4,6 @@ import{
     Text,
     View,
     Button,
-    Alert
 }from 'react-native';
 
 export default class CounterComponent extends Component {
@@ -32,9 +31,10 @@ export default class CounterComponent extends Component {
             <View style={{flex:1,marginTop:80}}>
             <Button
                 style={{marginTop:60}} 
-                onPress={()=>this.props.navigation.navigate('Component2')}
+                onPress={()=>this.props.navigation.navigate('Component2',{name:`ankit`})}
                 title='goto next page'
             /></View>
+            
             </View>
         );
     }

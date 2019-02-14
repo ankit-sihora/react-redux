@@ -10,10 +10,6 @@ const CounterReducer = (state ={count:0},action) => {
             return {
                 count: state.count - 1
             };
-        /* case Actions.PAGE:
-            return {
-                page: 'sihora'
-            } */
         default:
             return state;
     }

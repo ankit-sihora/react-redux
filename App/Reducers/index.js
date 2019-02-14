@@ -1,7 +1,5 @@
-import {combineReducers, createStore,applyMiddleware} from 'redux';
+import {combineReducers, createStore} from 'redux';
 import counterReducer from './CounterReducer';
-import thunk from 'redux-thunk';
-
 const AppReducers = combineReducers({
     counterReducer,
     
@@ -10,6 +8,5 @@ const AppReducers = combineReducers({
 const rootReducer = (state,action) => {
     return AppReducers(state,action);
 }
-let store = createStore(rootReducer,applyMiddleware(thunk));
-
+let store = createStore(rootReducer);
 export default store;
